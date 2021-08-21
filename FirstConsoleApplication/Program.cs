@@ -29,6 +29,8 @@ namespace FirstConsoleApplication
                 Console.Write("Please enter your second number: ");
                 num2 = Convert.ToInt32(Console.ReadLine());
 
+                //prompt choices of operation to user 
+
                 Console.WriteLine("Enter 1 for Addition");
                 Console.WriteLine("Enter 2 for Subtraction");
                 Console.WriteLine("Enter 3 for Multiplication");
@@ -42,9 +44,10 @@ namespace FirstConsoleApplication
 
                     Console.WriteLine("The sum of " + num1.ToString() + " and " + num2.ToString()
                                        + " is " + result.ToString() + ".");
-                   // Console.ReadLine();
-                    //if 2 is selected result will be subtraction 
-                }
+
+
+
+                }  //if 2 is selected result will be subtraction
                 else if (calc == 2)
                 {
 
@@ -52,22 +55,25 @@ namespace FirstConsoleApplication
 
                     Console.WriteLine(num1.ToString() + " minus " + num2.ToString()
                                        + " is equal to " + result.ToString() + ".");
-                   // Console.ReadLine();
 
-                    //if 3 is selected result will be multiplication. 
-                }
+
+
+                }  //if 3 is selected result will be multiplication. 
                 else if (calc == 3)
                 {
                     result = num1 * num2;
 
                     Console.WriteLine(num1.ToString() + " multiplied by " + num2.ToString()
                                        + " is " + result.ToString() + ".");
-                   // Console.ReadLine();
+                   
 
-                } else if (calc > 3 || calc < 1) {
-                    Console.WriteLine("Please choose either 1, 2, or 3 to calculate."); 
-               
+                } // if 1, 2, or 3 is not selected 
+                else if (calc > 3 || calc < 1)
+                {
+                    Console.WriteLine("Please choose either 1, 2, or 3 to calculate.");
+
                 }
+                //prompt for more operations else exit
 
                 Console.WriteLine("Would you like to do another calculation? Y/N ?");
                 string cont = Console.ReadLine().ToUpper();
