@@ -30,6 +30,8 @@ namespace FirstConsoleApplication
             Console.WriteLine("Enter 3 for Multiplication");
             calc = Convert.ToInt32(Console.ReadLine()); 
 
+            //if 1 is selection result will be addition 
+
             if (calc == 1)
             {
                 result = num1 + num2;
@@ -37,11 +39,25 @@ namespace FirstConsoleApplication
                 Console.WriteLine("The sum of " + num1.ToString() + " and " + num2.ToString()
                                    + " is " + result.ToString() + ".");
                 Console.ReadLine(); 
+            //if 2 is selected result will be subtraction 
+            } else if (calc == 2) {
 
-            }// else if(calc == 2)
-            //{/
-//                result = ()
-    //        }
+                result = num1 - num2;
+
+                Console.WriteLine(num1.ToString() + " minus " + num2.ToString()
+                                   + " is equal to " + result.ToString() + ".");
+                Console.ReadLine();
+            
+                //if 3 is selected result will be multiplication. 
+            } else if (calc == 3)
+            {
+                result = num1 * num2;
+
+                Console.WriteLine(num1.ToString() + " multiplied by " + num2.ToString()
+                                   + " is " + result.ToString() + ".");
+                Console.ReadLine();
+
+            }
 
 
 
