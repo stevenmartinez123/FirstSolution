@@ -16,9 +16,16 @@ namespace FirstConsoleApplication
             int calc;
 
             //Prompt user for first number 
-
-            Console.Write("Please enter a number: ");
+            Console.WriteLine("Calculation Program!");
+            Console.Write("Please enter your first number: ");
             num1 = Convert.ToInt32(Console.ReadLine());
+
+            //prompt user for second number 
+            Console.Write("Please enter your second number: ");
+            num2 = Convert.ToInt32(Console.ReadLine()); 
+
+
+
 
 
 
