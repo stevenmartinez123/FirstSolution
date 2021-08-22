@@ -151,8 +151,8 @@ namespace FirstFormsApplication
             // 
             // outputLabel
             // 
-            this.outputLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.outputLabel.Location = new System.Drawing.Point(128, 458);
+            this.outputLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.outputLabel.Location = new System.Drawing.Point(114, 469);
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(311, 34);
             this.outputLabel.TabIndex = 9;

@@ -56,29 +56,41 @@ namespace FirstFormsApplication
         }
 
         private void calculationButton_Click(object sender, EventArgs e)
-        {
-            a = Convert.ToDouble(firstNumberPrompt.Text);
-            b = Convert.ToDouble(secondNumberPrompt.Text);
-            option = Convert.ToString(OperationTextBox.Text);
+        { 
 
-            if (option.Equals("+"))
-            { 
-                result = a + b;
-                outputLabel.Text = result.ToString();
-            } else if (option.Equals("-"))
+            try
             {
-                result = a - b;
-                outputLabel.Text = result.ToString();
+                a = Convert.ToDouble(firstNumberPrompt.Text);
+                b = Convert.ToDouble(secondNumberPrompt.Text);
+                option = OperationTextBox.Text.ToString(); 
+                if (option.Equals("+")) // add values 
+                {
+                    result = a + b;
+                    outputLabel.Text = result.ToString();
+                }
+                else if (option.Equals("-")) // substract values 
+                {
+                    result = a - b;
+                    outputLabel.Text = result.ToString();
 
-            } else if (option.Equals("*"))
+                }
+                else if (option.Equals("*")) //multiply values 
+
+                {
+                    result = a * b;
+                    outputLabel.Text = result.ToString();
+                }
+                else // if operation input is not from the select choices 
+                {
+                    outputLabel.Text = "Syntax Error: Please choose correct operation symbol.";
+                }
+
+            } catch (FormatException) // if first inputs are not numeric values 
 
             {
-                result = a * b;
-                outputLabel.Text = result.ToString();
-            } else
-            {
-                outputLabel.Text = "Error: Please check operation symbol."; 
+                outputLabel.Text = "Syntax Error: Please choose numeric values only."; 
             }
+           
         }
 
         private void ResultLabel_Click(object sender, EventArgs e)
